@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content > div{
+    display: flex;
+    gap: 50px;
+    color: white;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+
+.content > div > p{
+    padding: 50px;
+    border: 1px solid rgb(110, 56, 220);
+    border-radius: 25px;
+    background-color: rgb(110, 56, 220);
+}

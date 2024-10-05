@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Test</title>
+    <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      height: 300vh;
+      overflow: hidden;
+      transition: transform 1s ease;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide.slide1 { background-color: blue; }
+    .slide.slide2 { background-color: green; }
+    .slide.slide3 { background-color: red; }
+    
+  </style>
+  </head>
+  <body>
+    <div class="slider-container" id="slider">
+      <div class="slide slide1">
+        <h2>TEST1</h2>
+      </div>
+      <div class="slide slide2 carousel">
+        <button id="prevBtn">Left</button>
+        <div class="slides">
+          
+          <div class="slideHorizontal">bb
+          </div>
+
+          <div class="slideHorizontal">ccc
+          </div>
+
+          <div class="slideHorizontal">ddd
+          </div>
+
+        </div>
+        <button id="nextBtn">Right</button>
+      </div>
+      <div class="slide slide3">
+        <h2>TEST3</h2>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('slider');
+      let currentSlide = 0;
+
+      function scrollToSlide(index) {
+        const offset = -index * 100;
+        slider.style.transform = `translateY(${offset}vh)`;
+      }
+
+      document.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0 && currentSlide < 2) {
+          currentSlide++;
+        } else if (event.deltaY < 0 && currentSlide > 0) {
+          currentSlide--;
+        }
+
+        scrollToSlide(currentSlide);
+      });
+
+      let touchStartY = 0;
+
+      document.addEventListener('touchstart', function(event) {
+        touchStartY = event.touches[0].clientY;
+      });
+
+      document.addEventListener('touchend', function(event) {
+        const touchEndY = event.changedTouches[0].clientY;
+
+        if (touchEndY < touchStartY && currentSlide < 2) {
+          currentSlide++;
+        } else if (touchEndY > touchStartY && currentSlide > 0) {
+          currentSlide--;
+        }
+
+        scrollToSlide(currentSlide);
+      });
+    });
+  </script>
+  </body>
+</html>
