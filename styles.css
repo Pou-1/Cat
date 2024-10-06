@@ -7,7 +7,25 @@
 
 body {
   background: #222;
-  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bad-script-regular {
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 section {
@@ -31,19 +49,19 @@ div {
   align-items: center;
 }
 
-h2 {
+.see {
   position: relative;
   color: #444;
-  font-size: 12em;
+  font-size: 6em;
+  display: none;
   line-height: 1em;
-  transition: 1s all ease;
 }
 
-h2.see::before {
-  content: "2021";
+.see::before {
+  content: attr(data-text);
   position: absolute;
   width: 0%;
-  color: #fff;
+  color: #ffffff;
   overflow: hidden;
   height: 100%;
   transition: 1s all ease;
@@ -54,10 +72,273 @@ h2.see:hover::before {
 }
 
 .title {
-  padding-top: 35px;
+  padding-top: 60px;
+  margin-bottom: 60px;
   padding-bottom: 35px;
   padding-left: 100px;
   width: 100%;
   background-color: white;
   font-size: 70px;
+}
+
+.surname {
+  position: absolute;
+  font-size: 23px;
+  background: #b55ace;
+  color: white;
+  padding: 6px;
+  bottom: 100%;
+  width: max-content;
+  border-bottom-left-radius: 0px;
+  border-radius: 7px;
+}
+
+.divsurname {
+  background: #edafff;
+  padding: 6px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.cursorsurname {
+  background-color: #b55ace;
+  height: 100px;
+  width: 5px;
+  display: inline-block;
+  position: absolute;
+}
+
+.imagesNumbers {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.imagesNumbers > img {
+  width: 35%;
+  animation: float 3s ease-in-out infinite;
+}
+
+#numberDiv {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.main {
+  display: block;
+}
+
+/* Animation---------------------------------------------------------- */
+.middle {
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  position: absolute;
+  display: none; /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+}
+
+.rounded {
+  opacity: 0;
+  border-radius: 50%;
+  border: 3px solid #cd0a41;
+  width: 500px;
+  height: 500px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.middleLogo {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.rounded > .middleLogo > p {
+  color: #fbd069;
+  margin: 0;
+  line-height: 1;
+  opacity: 0;
+  font-size: 325px;
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(51, 40, 40, 0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.rounded > img {
+  border-radius: 100%;
+  width: 90%;
+  width: inherit;
+  position: absolute;
+  opacity: 0;
+}
+/* FIN Animation---------------------------------------------------------- */
+
+.qualitydiv {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.illustration {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+}
+
+.illustration > h2 {
+  position: absolute;
+  bottom: 0;
+  padding: 2px;
+  font-family: "Bad Script", cursive;
+  background: rgba(230, 186, 186, 0.8);
+  border-radius: 17%;
+  width: 100%;
+  text-align: center;
+}
+
+.illustration > img {
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Effet de halo */
+}
+
+.bigilludiv {
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.titlequality {
+  font-size: 6em;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#titlequality1 {
+  background-color: #e31a0e;
+}
+
+#titlequality2 {
+  background-color: #f28a10;
+}
+
+#titlequality3 {
+  background-color: #efe61f;
+}
+
+#titlequality4 {
+  background-color: #79b925;
+}
+
+#titlequality5 {
+  background-color: #2857a5;
+}
+
+#titlequality6 {
+  background-color: #6d1e81;
+}
+
+.qualitydiv {
+  position: relative;
+}
+
+.bigilludiv {
+  height: 0;
+  visibility: hidden;
+  margin-top: 0px;
+}
+
+.bigilludiv.visible {
+  height: max-content;
+  visibility: visible;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.final > h1 {
+  font-family: "Bad Script", cursive;
+  color: lightcoral;
+  font-size: 4vw;
+  font-weight: bold;
+  z-index: 9;
+}
+
+.final > img {
+  border-radius: 100%;
+  width: 34%;
+}
+
+.arrowbottom {
+  width: 100%;
+  font-size: 4vw;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  animation: float2 1s ease-in-out infinite;
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
