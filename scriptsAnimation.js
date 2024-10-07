@@ -1,6 +1,6 @@
 const animatedDiv = document.getElementById('RoundDivLogo');
-const TextInLogo = document.getElementById('TextInLogo');
-const SkirtInLogo = document.getElementById('SkirtInLogo');
+const TextAnimation = document.getElementById('TextAnimation');
+const SpidermanCake = document.getElementById('SpidermanCake');
 const StartBackground = document.getElementById('StartBackground');
 
 setTimeout(() => {
@@ -11,9 +11,9 @@ setTimeout(() => {
 animatedDiv.addEventListener('animationend', (event) => {
     if (event.animationName === 'bounce-in-top') {
         animatedDiv.style.backgroundColor = "#ffc4db";
-        SkirtInLogo.style.animation = "slide-in-blurred-bottom 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both";
+        SpidermanCake.style.animation = "slide-in-blurred-bottom 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both";
     } else if (event.animationName === 'slide-in-blurred-bottom') {
-        TextInLogo.style.animation = "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
+        TextAnimation.style.animation = "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
     } else if (event.animationName === 'text-focus-in') {
         animatedDiv.style.animation = "scale-out-center 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
     } else if (event.animationName === 'scale-out-center') {
@@ -29,8 +29,8 @@ StartBackground.addEventListener('animationend', (event) => {
     }
 });
 
-/*
+
  StartBackground.style.display = "none";
         document.body.style.overflow = "scroll";
         document.body.style.marginTop = "30px";
-        */
+        
