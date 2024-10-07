@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: consolas;
 }
 
 body {
@@ -34,53 +33,58 @@ div {
   align-items: center;
 }
 
-.TitreDepartMain {
+/* TITLE MAIN----------------------*/
+.mainTitle{
   padding-top: 60px;
   margin-bottom: 60px;
   padding-bottom: 35px;
   padding-left: 100px;
   width: 100%;
+  justify-content: start;
+  font-size: 2rem;
   background-color: white;
-  font-size: 5rem;
 }
 
-.Surname {
-  position: absolute;
-  font-size: 23px;
-  background: #b55ace;
-  color: white;
-  padding: 6px;
-  bottom: 100%;
-  width: max-content;
-  border-bottom-left-radius: 0px;
-  border-radius: 7px;
+.TitreDepartMain{
+  margin-right: 20px;
+}
+
+.DivSurnameGlobal{
+  position: relative;
+  margin-right: 30px;
 }
 
 .DivSurname {
   background: #edafff;
-  padding: 6px;
+  padding: 10px;
   border-radius: 7px;
-  position: relative;
 }
 
 .CursorSurname {
   background-color: #b55ace;
-  height: 100px;
+  height: 100%;
   width: 5px;
   display: inline-block;
+  right: 0;
   position: absolute;
+  border: none;
   animation: CursorAnimation 3s ease-in-out normal;
 }
 
-@keyframes CursorAnimation {
-  0% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.Surname {
+  left: 97%;
+  position: absolute;
+  font-size: 23px;
+  background: #b55ace;
+  color: white;
+  padding: 10px;
+  bottom: 100%;
+  width: max-content;
+  border-radius: 7px;
+  border-bottom-left-radius: 0px;
 }
 
+/* END TITLE MAIN----------------------*/
 
 .imagesNumbers {
   position: fixed;
@@ -300,5 +304,25 @@ div {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1200px) {
+  h1, .titlequality {
+    font-size: 4rem;
+  }
+
+  .mainTitle {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1, .titlequality {
+    font-size: 2rem;
+  }
+
+  .Surname {
+    font-size: 1rem;
   }
 }
