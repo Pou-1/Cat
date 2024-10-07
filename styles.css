@@ -78,7 +78,7 @@ h2.see:hover::before {
   padding-left: 100px;
   width: 100%;
   background-color: white;
-  font-size: 70px;
+  font-size: 5rem;
 }
 
 .surname {
@@ -127,7 +127,7 @@ h2.see:hover::before {
   color: white;
   padding: 10px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 2rem;
   pointer-events: none;
   z-index: 999;
 }
