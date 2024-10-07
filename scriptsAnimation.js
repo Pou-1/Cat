@@ -29,8 +29,8 @@ StartBackground.addEventListener('animationend', (event) => {
     }
 });
 
-//supprimer
-
+/*
  StartBackground.style.display = "none";
         document.body.style.overflow = "scroll";
         document.body.style.marginTop = "30px";
+        */

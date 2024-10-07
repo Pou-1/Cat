@@ -159,7 +159,7 @@ h2.see:hover::before {
   justify-content: center;
   perspective: 1000px;
   position: absolute;
-  display: none; /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+ /* display: none; /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 }
 
 .rounded {
