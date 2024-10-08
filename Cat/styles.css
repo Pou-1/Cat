@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bad-script-regular {
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftmiddle {
+  position: fixed;
+  width: 30%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Divpages {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.Divpages > h1 {
+  text-align: end;
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  padding: 10px;
+  flex-grow: 1;
+  transition: all ease-in-out 0.3s;
+}
+
+.Divpages > h1:hover {
+  flex-grow: 3;
+}
+
+.Divpages > h1:nth-of-type(1) {
+  background-color: #e31a0e;
+}
+
+.Divpages > h1:nth-of-type(2) {
+  background-color: #f28a10;
+}
+
+.Divpages > h1:nth-of-type(3) {
+  background-color: #efe61f;
+}
+
+.Divpages > h1:nth-of-type(4) {
+  background-color: #79b925;
+}
+
+.Divpages > h1:nth-of-type(5) {
+  background-color: #2857a5;
+}
+
+.Divpages > h1:nth-of-type(6) {
+  background-color: #6d1e81;
+}
+
+.Divpages > h1 > .DivPagesEmoji {
+  width: 0%;
+  visibility: hidden;
+}
+
+.Divpages > h1:hover > .DivPagesEmoji {
+  visibility: visible;
+  width: 100%;
+}
+
+.HomeButton {
+  color: aqua;
+}
