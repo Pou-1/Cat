@@ -34,7 +34,7 @@ div {
 }
 
 /* TITLE MAIN----------------------*/
-.mainTitle{
+.mainTitle {
   padding-top: 60px;
   margin-bottom: 60px;
   padding-bottom: 35px;
@@ -45,11 +45,11 @@ div {
   background-color: white;
 }
 
-.TitreDepartMain{
+.TitreDepartMain {
   margin-right: 20px;
 }
 
-.DivSurnameGlobal{
+.DivSurnameGlobal {
   position: relative;
   margin-right: 30px;
 }
@@ -252,18 +252,18 @@ div {
   background-color: #6d1e81;
 }
 
-.titlequality > div{
+.titlequality > div {
   width: 40px;
   height: initial;
 }
 
-.titlequality > div > .click{
-  height: 40px;
-  width: 40px;
+.titlequality > div > .click {
+  height: 20px;
+  width: 20px;
   border: 4px solid white;
   border-radius: 40px;
   position: relative;
-  animation: reduce 3s ease-in-out infinite;
+  animation: reduce 1s ease-in-out infinite alternate;
 }
 
 @keyframes reduce {
@@ -272,12 +272,12 @@ div {
     height: 5px;
   }
   100% {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
   }
 }
 
-.titlequality > div > img{
+.titlequality > div > img {
   width: 30px;
   transform: translateY(20px) translateX(15px);
   position: absolute;
@@ -294,7 +294,6 @@ div {
     transform: translateY(0px);
   }
 }
-
 
 .qualitydiv {
   position: relative;
@@ -354,7 +353,8 @@ div {
 }
 
 @media (max-width: 1200px) {
-  h1, .titlequality {
+  h1,
+  .titlequality {
     font-size: 4rem;
   }
 
@@ -364,11 +364,21 @@ div {
 }
 
 @media (max-width: 800px) {
-  h1, .titlequality {
+  h1,
+  .titlequality {
     font-size: 2rem;
   }
 
   .Surname {
     font-size: 1rem;
+    border-bottom-left-radius: 7px;
+    left: -100%;
+    margin-bottom: 5px;
+  }
+  .final {
+    height: 27vh;
+  }
+  .imagesNumbers {
+    width: 150px;
   }
 }
