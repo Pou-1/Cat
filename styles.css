@@ -228,6 +228,8 @@ div {
 
 #titlequality1 {
   background-color: #e31a0e;
+  display: flex;
+  justify-content: center;
 }
 
 #titlequality2 {
@@ -249,6 +251,50 @@ div {
 #titlequality6 {
   background-color: #6d1e81;
 }
+
+.titlequality > div{
+  width: 40px;
+  height: initial;
+}
+
+.titlequality > div > .click{
+  height: 40px;
+  width: 40px;
+  border: 4px solid white;
+  border-radius: 40px;
+  position: relative;
+  animation: reduce 3s ease-in-out infinite;
+}
+
+@keyframes reduce {
+  0% {
+    width: 5px;
+    height: 5px;
+  }
+  100% {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.titlequality > div > img{
+  width: 30px;
+  transform: translateY(20px) translateX(15px);
+  position: absolute;
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 .qualitydiv {
   position: relative;
